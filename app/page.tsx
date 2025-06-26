@@ -890,13 +890,13 @@ export default function ShortsBlockerLanding() {
 
             <div className="flex space-x-6">
               <Link
-                href="mailto:support@shortsblocker.com"
+                href="mailto:parth.gupt07@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
               >
                 <Mail className="w-6 h-6" />
               </Link>
               <Link
-                href="https://github.com/shortsblocker"
+                href="https://github.com/theparthgupta/ShortsBlocker"
                 className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
                 target="_blank"
                 rel="noopener noreferrer"
