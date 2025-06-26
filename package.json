@@ -1,7 +1,8 @@
 {
-  "name": "my-v0-project",
+  "name": "shorts-blocker",
   "version": "0.1.0",
   "private": true,
+  "description": "Kill the scroll. Reclaim your time. Block short-form distractions on YouTube, TikTok, Instagram, and more.",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
