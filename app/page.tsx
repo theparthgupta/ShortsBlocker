@@ -243,12 +243,15 @@ export default function ShortsBlockerLanding() {
                   </Button>
 
                   <Button
+                    asChild
                     variant="outline"
                     size="lg"
                     className="border-gray-500 bg-gray-800/50 text-gray-200 hover:bg-gray-700 hover:text-white hover:border-gray-400 px-8 py-6 text-lg rounded-2xl backdrop-blur-sm"
                   >
-                    <Play className="w-5 h-5 mr-2" />
-                    Watch Demo
+                    <Link href="https://www.youtube.com/watch?v=RPBkGbccLFw" target="_blank" rel="noopener noreferrer">
+                      <Play className="w-5 h-5 mr-2" />
+                      Watch Demo
+                    </Link>
                   </Button>
                 </div>
 
