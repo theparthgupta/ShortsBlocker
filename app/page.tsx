@@ -725,14 +725,6 @@ export default function ShortsBlockerLanding() {
               </motion.div>
             ))}
 
-            {/* Connecting Lines - Behind the content */}
-            <div
-              className="hidden md:block absolute top-6 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-green-500/50 z-0"
-              style={{
-                left: "calc(16.666% + 1.5rem)",
-                right: "calc(16.666% + 1.5rem)",
-              }}
-            />
           </div>
         </div>
       </section>
