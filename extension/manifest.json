@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Shorts Blocker",
+    "version": "1.0",
+    "description": "Hide Shorts, Reels, and short-form videos on YouTube, Instagram, TikTok and other websites completely.",
+    "permissions": ["scripting", "activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "icons": {
+      "128": "icon.png"
+    }
+
+  }
+  
