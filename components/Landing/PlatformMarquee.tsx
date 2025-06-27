@@ -67,7 +67,7 @@ const platforms = [
 
 export default function PlatformMarquee() {
   // Create enough duplicates to ensure seamless loop
-  const duplicatedPlatforms = [...platforms, ...platforms, ...platforms];
+  const duplicatedPlatforms = [...platforms, ...platforms, ...platforms,];
 
   return (
     <div className="w-full bg-gray-900 py-8">
@@ -77,7 +77,7 @@ export default function PlatformMarquee() {
           style={{ width: 'max-content' }}
           animate={{ x: [-0, -platforms.length * 200] }}
           transition={{
-            duration: platforms.length * 3,
+            duration: platforms.length * 6,
             repeat: Infinity,
             repeatType: 'loop',
             ease: 'linear',
