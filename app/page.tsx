@@ -845,6 +845,23 @@ export default function ShortsBlockerLanding() {
               Join thousands of users who have already reclaimed their time and improved their focus.
             </p>
 
+            {/* Product Hunt Badge */}
+            <div className="flex justify-center mb-8">
+              <a
+                href="https://www.producthunt.com/products/shorts-blocker?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-shorts&#0045;blocker"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=984577&theme=light&t=1751011874986"
+                  alt="Shorts Blocker - Remove Shorts from your device. Save your Time | Product Hunt"
+                  style={{ width: '250px', height: '54px' }}
+                  width={250}
+                  height={54}
+                />
+              </a>
+            </div>
+
             <div className="space-y-6">
               <Button
                 asChild
