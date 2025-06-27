@@ -203,7 +203,7 @@ export default function ShortsBlockerLanding() {
                 </h1>
 
                 <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
-                  Block short-form content under 30 seconds.
+                  Block short-form content under 120 seconds.
                   <span className="text-blue-300"> Reclaim your focus</span> instantly.
                 </p>
 
@@ -401,7 +401,7 @@ export default function ShortsBlockerLanding() {
                               className="text-center mt-6"
                             >
                               <div className="text-2xl font-bold text-red-400 mb-2">SHORTS BLOCKED</div>
-                              <div className="text-gray-300 text-sm">Content under 30 seconds</div>
+                              <div className="text-gray-300 text-sm">Content under 120 seconds</div>
                               <div className="text-xs text-gray-400 mt-2">Duration: 0:29</div>
                             </motion.div>
 
@@ -574,7 +574,7 @@ export default function ShortsBlockerLanding() {
           >
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-gray-600/30 backdrop-blur-sm">
               <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-              <span className="text-gray-300">Automatically detects and blocks content under 30 seconds</span>
+              <span className="text-gray-300">Automatically detects and blocks content under 120 seconds</span>
             </div>
           </motion.div>
         </div>
@@ -686,7 +686,7 @@ export default function ShortsBlockerLanding() {
               {
                 step: "02",
                 title: "Blocks Short Content",
-                description: "Hides or blocks any video content under 30 seconds",
+                description: "Hides or blocks any video content under 120 seconds",
                 icon: Shield,
                 color: "purple",
               },
