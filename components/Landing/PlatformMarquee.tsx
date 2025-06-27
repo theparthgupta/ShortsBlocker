@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const platforms = [
@@ -66,23 +66,17 @@ const platforms = [
 ];
 
 export default function PlatformMarquee() {
-  const [isPaused, setIsPaused] = useState(false);
-
   // Create enough duplicates to ensure seamless loop
   const duplicatedPlatforms = [...platforms, ...platforms, ...platforms];
 
   return (
     <div className="w-full bg-gray-900 py-8">
-      <div 
-        className="relative overflow-hidden w-full"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
+      <div className="relative overflow-hidden w-full">
         <motion.div
           className="flex gap-6"
           style={{ width: 'max-content' }}
-          animate={isPaused ? { x: 0 } : { x: [-0, -platforms.length * 200] }}
-          transition={isPaused ? { duration: 0 } : {
+          animate={{ x: [-0, -platforms.length * 200] }}
+          transition={{
             duration: platforms.length * 3,
             repeat: Infinity,
             repeatType: 'loop',
@@ -90,21 +84,13 @@ export default function PlatformMarquee() {
           }}
         >
           {duplicatedPlatforms.map((platform, index) => (
-            <motion.div
+            <div
               key={`${platform.name}-${index}`}
-              className="group flex-shrink-0 w-40"
-              whileHover={{ 
-                scale: 1.05,
-                transition: { type: "spring", stiffness: 300, damping: 25 }
-              }}
+              className="flex-shrink-0 w-40"
             >
               <div
-                className={`relative p-4 rounded-2xl bg-gradient-to-br ${platform.gradient}/10 border border-${platform.color === "gray" ? "gray" : platform.color}-500/20 hover:border-${platform.color === "gray" ? "gray" : platform.color}-500/40 transition-all duration-300 backdrop-blur-sm`}
+                className={`relative p-4 rounded-2xl bg-gradient-to-br ${platform.gradient}/10 border border-${platform.color === "gray" ? "gray" : platform.color}-500/20 backdrop-blur-sm`}
               >
-                {/* Glow effect */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${platform.gradient}/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}
-                />
                 
                 {/* Icon container */}
                 <div
@@ -123,7 +109,7 @@ export default function PlatformMarquee() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
         
