@@ -8,21 +8,24 @@ const steps = [
     title: "Monitors Duration",
     description: "Automatically detects video length across all major platforms",
     icon: Focus,
-    color: "blue",
+    borderColor: "border-blue-500/20",
+    iconGradient: "from-blue-500 to-blue-700",
   },
   {
     step: "02",
     title: "Blocks Short Content",
     description: "Hides or blocks any video content under 120 seconds",
     icon: Shield,
-    color: "purple",
+    borderColor: "border-purple-500/20",
+    iconGradient: "from-purple-500 to-purple-700",
   },
   {
     step: "03",
     title: "Saves Your Time",
     description: "Works on YouTube, TikTok, Instagram Reels, and more",
     icon: CheckCircle,
-    color: "green",
+    borderColor: "border-emerald-500/20",
+    iconGradient: "from-emerald-500 to-emerald-700",
   },
 ];
 
@@ -54,9 +57,9 @@ export default function HowItWorks() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className={`rounded-2xl p-8 bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-${step.color}-500/20 shadow-lg hover:scale-105 transition-all duration-300`}>
+              <div className={`rounded-2xl p-8 bg-gradient-to-br from-gray-900/60 to-gray-800/60 ${step.borderColor} border shadow-lg hover:scale-105 transition-all duration-300`}>
                 <div className="flex items-center mb-4">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-${step.color}-500 to-${step.color}-700 mr-4`}>
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br ${step.iconGradient} mr-4`}>
                     <step.icon className="w-7 h-7 text-white" />
                   </div>
                   <span className="text-2xl font-bold text-white">{step.step}</span>
@@ -70,4 +73,4 @@ export default function HowItWorks() {
       </div>
     </section>
   );
-} 
+}
